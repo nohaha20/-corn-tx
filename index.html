@@ -8,6 +8,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 100px;
+      background-color: #f0f0f0;
     }
 
     h1 {
@@ -75,8 +76,7 @@
     function copyToClipboard(elementId) {
       const text = document.getElementById(elementId).textContent;
       navigator.clipboard.writeText(text)
-        .then(() => alert('Copied: ' + text))
-        .catch(err => alert('Failed to copy text: ' + err));
+        .catch(err => console.error('Copy failed:', err));
     }
   </script>
 </body>
